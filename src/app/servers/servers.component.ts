@@ -8,8 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+  //ovo smo dohvatili u servers.componnet.html-u preko property bindinga
+  allowNewServer = false;
+  serverCreationStatus = "No server was created";
+  serverName = "unesi server name";
+  onCreateNewServer() {
+    this.serverCreationStatus = "New server was created. Name is:" + this.serverName
+  }
+  onUpdateServerName(event) {
+    //console.log(event.target.value);
+    this.serverName = event.target.value;
+  }
+  constructor() {
+    debugger;
+    setTimeout(() => {
+      this.allowNewServer = true
+    },
+      2000)
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,26 @@
+<!--zelimo useru omoguciti da doda novi server-->
 <h1>serverssss</h1>
 <app-server></app-server>
 <app-server></app-server>
 <app-server></app-server>
+<!--Primjer property binding-a-->
+<button class="btn btn-primary"
+    [disabled]="!allowNewServer">Add new Server</button>
+
+<!--disabled ce biti true, ako je allowNewServer false-->
+<p>allowNewServer: {{allowNewServer}}</p>
+<!--string interpolation-->
+<p [innerText]="allowNewServer"></p>
+<!--property binding-->
+<p>{{serverCreationStatus}}</p>
+
+<button (click)='onCreateNewServer()'>Add new
+    server</button>
+<hr />
+<label>Server Name</label>
+<input type="text" class="form-control"
+    (input)="onUpdateServerName($event)">
+<input type="text" class="form-control"
+    [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+<hr>

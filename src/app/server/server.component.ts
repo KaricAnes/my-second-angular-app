@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
-  serverData = 'firebaseeee';
+  constructor() { debugger; }
+  serverId = 20;
+  serverStatus = "onnline";
+  
+  getStatus() {
+    return this.serverStatus;
+  }
 }

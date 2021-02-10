@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
+  playerName = "Ivan Lendric";
+  changePlayerName() {
+    debugger;
+    if (this.playerName === "Ivan Lendric") {
+      this.playerName = "Sinisa Stevanovic"
+    } else {
+      this.playerName = "Ivan Lendric"
+    }
 
-  constructor() { }
+  }
+  constructor() {
+    debugger;
+  }
 
   ngOnInit(): void {
+    debugger;
   }
 
 }
