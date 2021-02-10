@@ -1,0 +1,8 @@
+<!--Ovo ispod nije two way binding, tek na onChange se sinkronizuje sa value-om-->
+<input placeholder="Not two way binding" type="text" (input)='updateLaptopName($event)'>
+<hr>
+<label>Two way binding</label>
+
+<!--Ovo ispod je two way binding, sve vrijeme se sinkronizuje sa value-om-->
+<input type="text" class="form-control" [(ngModel)]="laptopName">
+<p>{{laptopName}}</p>

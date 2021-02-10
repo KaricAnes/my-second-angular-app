@@ -8,7 +8,9 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerComponent } from './player/player.component';
-
+import { LaptopComponent } from './laptop/laptop.component';
+import { FormsModule } from '@angular/forms';
+import { Task2Component } from './task2/task2.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +19,14 @@ import { PlayerComponent } from './player/player.component';
     WarningAlertComponent,
     SuccessAlertComponent,
     PlayersComponent,
-    PlayerComponent
+    PlayerComponent,
+    LaptopComponent,
+    Task2Component
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
