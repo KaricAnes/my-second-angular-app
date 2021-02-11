@@ -10,7 +10,9 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerComponent } from './player/player.component';
 import { LaptopComponent } from './laptop/laptop.component';
 import { FormsModule } from '@angular/forms';
-import { Task2Component } from './task2/task2.component'
+import { Task2Component } from './task2/task2.component';
+import { BooksComponent } from './books/books.component';
+import { BookComponent } from './book/book.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { Task2Component } from './task2/task2.component'
     PlayersComponent,
     PlayerComponent,
     LaptopComponent,
-    Task2Component
+    Task2Component,
+    BooksComponent,
+    BookComponent
 
   ],
   imports: [

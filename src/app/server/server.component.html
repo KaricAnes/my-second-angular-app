@@ -1,3 +1,8 @@
 <!--String interpolation, bitno je da ovo u zagradi varti string ili number-->
-<h3>Server Id is {{serverId}} and it is {{getStatus()}}. STRING INTERPLATION</h3>
+<h3 [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">Server
+    Id is
+    {{serverId}} and it is {{getStatus()}}. STRING
+    INTERPLATION
+</h3>
 <p></p>
