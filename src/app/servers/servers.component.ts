@@ -10,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   //ovo smo dohvatili u servers.componnet.html-u preko property bindinga
   allowNewServer = false;
-  serverCreationStatus = "No server was created";
-  serverName = "unesi server name";
+  serverCreationStatus = false;
+  serverName = "";
+  servers = ['Testserver', 'Testserver2'];
   onCreateNewServer() {
-    this.serverCreationStatus = "New server was created. Name is:" + this.serverName
+    this.serverCreationStatus = true;
+    this.servers.push(this.serverName);
   }
   onUpdateServerName(event) {
     //console.log(event.target.value);

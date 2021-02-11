@@ -1,0 +1,8 @@
+<input type="text" placeholder="Enter book name"
+    [(ngModel)]="bookAuthor">
+<button (click)='onCreateNewBook()'>Add new book</button>
+<button (click)='onChangeBookValidity()'>Change book
+    validity</button>
+<p *ngFor="let book of books">Book author is
+    {{bookAuthor}} and it is {{getBookValidity()}}>
+</p>

@@ -1,8 +1,7 @@
 <!--zelimo useru omoguciti da doda novi server-->
 <h1>serverssss</h1>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+
 <!--Primjer property binding-a-->
 <button class="btn btn-primary"
     [disabled]="!allowNewServer">Add new Server</button>
@@ -12,15 +11,24 @@
 <!--string interpolation-->
 <p [innerText]="allowNewServer"></p>
 <!--property binding-->
-<p>{{serverCreationStatus}}</p>
-
-<button (click)='onCreateNewServer()'>Add new
-    server</button>
-<hr />
-<label>Server Name</label>
+<hr>
+<!--<p>{{serverCreationStatus}}</p> -->
+<hr>
 <input type="text" class="form-control"
     (input)="onUpdateServerName($event)">
 <input type="text" class="form-control"
     [(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<p *ngIf="serverCreationStatus; else noServer">Server was
+    created. Server
+    name is:
+    {{serverName}}
+</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+
+<button (click)='onCreateNewServer()'>Add new
+    server</button>
+<hr>
+<label>Server Name</label>
 <hr>
