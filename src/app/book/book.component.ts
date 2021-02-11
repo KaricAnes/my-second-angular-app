@@ -22,6 +22,10 @@ export class BookComponent implements OnInit {
     return this.bookAllowed === true ? 'allowed' : 'not allowed'
   }
 
+  getColor() {
+    return this.bookAllowed === true ? 'white' : 'green'
+  }
+
   constructor() { }
 
   ngOnInit(): void {

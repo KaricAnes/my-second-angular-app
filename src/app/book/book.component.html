@@ -3,6 +3,9 @@
 <button (click)='onCreateNewBook()'>Add new book</button>
 <button (click)='onChangeBookValidity()'>Change book
     validity</button>
-<p *ngFor="let book of books">Book author is
+<p *ngFor="let book of books"
+    [ngClass]="{allowedBook: bookAllowed === true}"
+    [ngStyle]="{color: getColor()}">Book
+    author is
     {{bookAuthor}} and it is {{getBookValidity()}}>
 </p>
