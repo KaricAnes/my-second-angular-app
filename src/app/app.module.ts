@@ -12,7 +12,8 @@ import { LaptopComponent } from './laptop/laptop.component';
 import { FormsModule } from '@angular/forms';
 import { Task2Component } from './task2/task2.component';
 import { BooksComponent } from './books/books.component';
-import { BookComponent } from './book/book.component'
+import { BookComponent } from './book/book.component';
+import { Assignament3Component } from './assignament3/assignament3.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { BookComponent } from './book/book.component'
     LaptopComponent,
     Task2Component,
     BooksComponent,
-    BookComponent
+    BookComponent,
+    Assignament3Component
 
   ],
   imports: [
