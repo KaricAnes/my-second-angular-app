@@ -13,7 +13,16 @@ import { FormsModule } from '@angular/forms';
 import { Task2Component } from './task2/task2.component';
 import { BooksComponent } from './books/books.component';
 import { BookComponent } from './book/book.component';
-import { Assignament3Component } from './assignament3/assignament3.component'
+import { Assignament3Component } from './assignament3/assignament3.component';
+import { PhoneComponent } from './phone/phone.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +36,18 @@ import { Assignament3Component } from './assignament3/assignament3.component'
     Task2Component,
     BooksComponent,
     BookComponent,
-    Assignament3Component
+    Assignament3Component,
+    PhoneComponent,
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    MatSliderModule,
+    MatButtonModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
